@@ -16,10 +16,9 @@ sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome
 sudo apt install obs-studio -y
 sudo apt install firefox -y
 sudo apt install falkon -y
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-apt update
-apt install anydesk -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg --install google-chrome-stable_current_amd64.deb
+sudo apt install --assume-yes --fix-broken
 sudo adduser ALOK chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Completed " >&2 ||
